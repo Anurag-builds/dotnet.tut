@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 
@@ -32,3 +33,25 @@ namespace ConsoleApp1
         }
     }
 }
+=======
+﻿using System;
+
+class Example {
+    static void CheckAge(int age) {
+        if (age < 18) {
+            throw new ArgumentException("Not eligible to vote");
+        }
+        Console.WriteLine("Eligible to vote");
+    }
+
+    static void Main() {
+        try {
+            CheckAge(19);
+        } catch (ArgumentException e) {
+            Console.WriteLine("Error: " + e.Message);
+        } finally {
+            Console.WriteLine("Check completed");
+        }
+    }
+}
+>>>>>>> 3447f8a (merging lenovo)

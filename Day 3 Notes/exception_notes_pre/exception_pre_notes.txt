@@ -1,0 +1,47 @@
+complie time--syntax error
+runtime -exception
+
+exception is runtime error ,and when exception is generated then program execution is stopped,
+we don't want to stop the program execution then we need to handle exception
+when we handle the exception ,program execution is continued even after the exception
+
+exception is handle by using try catch block
+1.try-monitor an exception
+2.catch-handle the exception which is thrown by try block
+
+Exception is base class for all child exception
+Exception class can handle all types of exception.
+
+finally:finally is always executed even after the exception is present or not
+
+class Exception
+{
+	string msg;
+
+	public Exception(string m)
+	{
+		msg=m;
+	}
+
+	public string Message
+	{
+		get
+		{
+			return msg;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

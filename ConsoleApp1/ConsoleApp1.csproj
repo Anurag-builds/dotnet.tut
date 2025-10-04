@@ -2,7 +2,11 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
+<<<<<<< HEAD
     <TargetFramework>net9.0</TargetFramework>
+=======
+    <TargetFramework>net10.0</TargetFramework>
+>>>>>>> 3447f8a (merging lenovo)
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>

@@ -1,0 +1,52 @@
+array
+1.fixed size
+2.collection of similar types
+
+collection
+1.flexible size
+2.collection of mixed types
+3.type of collection is a object
+4.boxing and unboxing is required to store and read the elements,so performance will reduce
+
+object o=10; //boxing
+int a=o;  //unboxing
+
+Namespace:System.Collections
+
+classes of System.Collections
+1.ArrayList-index based
+2.Hashtable-collection of key/value pair which is based on hashcode of the key
+3.Stack-LIFO
+4.Queue-FIFO
+5.SortedList-collection of key/value pair ,which is sorted by keys
+
+Generics
+1.flexible size
+2.collection of similar types.
+3.no boxing and unboxing required, so performance will increase.
+
+namespace:System.Collections.Generic
+
+classes of System.Collections.Generic
+1.List-index based
+2.stack-LIFO
+3.queue-FIFO
+4.Dictionary-collection of key/value pair
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
