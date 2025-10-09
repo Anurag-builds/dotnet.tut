@@ -1,0 +1,240 @@
+Database-collection of tables
+table-collection of rows and columns
+
+course
+cid	cname	fee	duration
+PK
+
+student
+rno	sname	address	phno
+PK
+
+teacher
+tid	tname	salary	jdate
+PK
+
+batch
+bid	bname	cid	tid	bstartdate	benddate	
+PK		FK	FK
+
+attendance
+rno	date	status
+
+exam
+rno	mid	marks
+
+types of SQL
+1.DDL(Data Definition Language)-create/alter/drop
+2.DML(Data Manipulation Language)-insert/update/delete
+3.TCL(Transaction Control Language)-commit/rollback
+4.DCL(Data Control Language)-grant/revoke
+5.DQL-(Data Query Language)-select
+
+1.DDL(Data Definition Language)-create/alter/drop
+
+1.create database anjali_pre
+
+2.drop database anjali_pre
+
+3.
+create table student
+(
+rno int primary key,
+sname varchar(50) not null,
+address varchar(50)
+)
+
+
+sname char(50)---------------fixed size
+ram-50 memories--47 wasted
+
+sname varchar(50)-------------variable size
+ram-3 memories-no memory waste
+
+4)add new column in existing table
+alter table student add email varchar(50)
+
+5)drop the column from existing table
+alter table student drop column email
+
+6)modify the existing column
+alter table student alter column address char(30)
+
+7)drop table student
+
+8)
+create table student
+(
+	rno int primary key identity(101,1),
+	sname varchar(50),
+	address varchar(50)
+)
+
+9)insert into student(sname,address)values('ram','pune')
+
+10)select * from student
+
+11)PK to new table
+create table student
+(
+	rno int constraint pk_rno primary key,
+	sname varchar(50),
+	address varchar(50)
+)
+
+types of constraints
+1.primary key
+2.check constraint
+3.null 
+4.default
+5.unique
+6.foreign key
+
+12)alter table student drop constraint pk_rno
+
+13)PK to existing column
+alter table student add constraint pk_rno primary key(rno)
+
+14)PK to new column
+alter table student add rno int constraint pk_rno primary key
+
+emp table
+eno-PK
+ename
+email-unique
+
+in one table only one primary key allow
+in one table multiple unique keys are allow
+
+primary key value cannot be null
+only one null value allow in unique
+
+15)add unique constraint to new table
+create table student
+(
+	rno int primary key,
+	sname varchar(50),
+	email varchar(50) constraint uk_email unique
+)
+
+16)add unique key to existing table
+alter table student add mono char(50) constraint uk_mono unique
+
+17)add unique key to existing column
+alter table student add constraint uk_mono unique(mono)
+
+18)check constraint to new table
+create table student
+(
+	rno int primary key,
+	sname varchar(50),
+	age int constraint check_age check(age>18)
+)
+
+19)check constraint to new column
+alter table student add jdate date constraint check_jdate check(jdate>=getdate())
+
+20)check constraint to existing column
+alter table student add constraint check_jdate check (jdate>=getdate())
+
+21)default constraint to new table
+create table student
+(
+	rno int primary key,
+	sname varchar(50),
+	country varchar(50) constraint def_country default 'india'
+)
+
+22)default constraint to new column
+alter table student add salary int constraint def_sal default 15000
+
+23)default constraint to existing column
+alter table student add constraint def_sal default 20000 for salary
+
+24)rename the column
+exec sp_rename 'student.salary','sal'
+
+25)rename the table
+exec sp_rename 'student','stud'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

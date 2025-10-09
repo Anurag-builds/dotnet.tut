@@ -1,0 +1,23 @@
+class(design & devlopement)
+in one file when u write both design and development logic ,,it is not easy to manage
+employee.design.cs
+employee.logic.cs
+
+one class is divided into multiple files using partial class.
+
+one class is write into one file
+40 variables---40 lines
+20 methods-50*20=1000
+40 properties=10*40=400
+5 constructor=40*5=200
+
+code size:40+1000+400+200=1700 lines
+
+one class is divided into multiple files using partial class.
+
+Nullable type
+reference type can be null
+eg.string,class object,array;
+
+value type cannot be null
+using nullable type we can assign null value to value type.

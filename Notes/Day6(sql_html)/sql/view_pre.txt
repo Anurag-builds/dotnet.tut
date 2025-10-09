@@ -1,0 +1,65 @@
+view is virtual table created by executing select query
+
+types of view
+1.simple view
+2.complex view
+
+a.simple view:view is created using only one table
+
+
+create view abc
+as
+select * from emp
+
+call:
+1)select * from abc
+2)select * from abc where dno=10
+3)insert into abc(eno,enm,dno)values(110,'achyut',30)
+4)update abc set enm='rahul sharma' where eno=104
+5)delete from abc where eno=110
+
+insert,update,delete is possible in simple view
+
+complex view
+view is created by using multiple tables/join query
+
+create view xyz
+as
+select eno,enm,dept.dno,dnm
+from emp,dept 
+where emp.dno=dept.dno
+
+call:
+1)select * from xyz
+2)select * from xyz where dno=10
+3)insert and delete are not possible in complex view, only update is possible
+4)update xyz set enm='priyansh' where eno=104
+
+drop view abc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,178 @@
+DML(Data Manipulation Language)-insert/update/delete
+DQL(Data Query Language)-select
+
+1)
+create table emp
+(
+eno int primary key,
+enm varchar(50),
+dno int
+)
+
+2)insert into emp(eno,enm,dno)values(101,'pooja',10)
+
+3)select * from emp
+
+4)update emp set enm='rakesh varma' where eno=104
+
+5)update emp set enm='rakesh',dno=30 where eno=104
+
+6)delete from emp where eno=106
+
+7)select * from emp where dno=10
+
+8)select enm,dno from emp
+
+9)select * from emp where salary>40000
+
+10)select * from emp where salary>30000 and salary<60000
+
+11)select * from emp where salary between 30000 and 60000
+
+12)select * from emp order by salary
+
+13)select * from emp order by salary desc
+
+14)select max(salary) from emp 
+
+15)first highest salary
+select * from emp where salary=(select max(salary) from emp) 
+
+16)second highest salary
+select * from emp where salary=
+(select max(salary) from emp where salary<
+(select max(salary) from emp))
+
+17)third highest salary
+select * from emp where salary=
+(select max(salary) from emp where salary<
+(select max(salary) from emp where salary<
+(select max(salary) from emp)))
+
+18)select count(*) from emp
+
+19)select sum(salary) from emp
+
+20)select avg(salary) from emp
+
+21)select upper(enm) from emp
+
+22)select getdate()
+
+23)select year(getdate())
+
+24)select month(getdate())
+
+25)select day(getdate())
+
+26)select distinct(dno) from emp
+
+aggregate functions:count(),max(),sum(),avg(),upper(),getdate(),month(),year(),day(),distinct()
+
+27)select * from emp where enm like 's%'
+
+28)select * from emp where enm like '_o%'
+
+29)select * from emp where enm like '__o%'
+
+30)select * from emp where enm like '%s%'
+
+31)select dno,count(*) as empcnt from emp group by dno
+
+32)select dno,count(*) as empcnt from emp group by dno having dno=10
+
+33)select dno,count(*) as empcnt from emp group by dno having count(*)>2
+
+34)select top 1 dno,count(*) as empcnt from emp group by dno order by count(*) desc
+
+35)select dno,max(salary) from emp group by dno
+
+36)select dno,max(salary) from emp group by dno having max(salary)>40000
+
+37)select top 1 dno,max(salary) from emp group by dno order by max(salary) desc
+
+38)select top 3 * from emp 
+
+39)select top 3 * from emp order by salary desc
+
+40)highest salary emp without using max
+select top 1 * from emp order by salary desc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

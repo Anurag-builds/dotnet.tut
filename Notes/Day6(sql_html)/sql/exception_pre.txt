@@ -1,0 +1,11 @@
+begin try
+declare @a int,@b int
+set @a=0;
+set @b=10/@a;
+print 'b:'
+print @b
+end try
+begin catch
+print 'do not enter zero'
+print error_message()
+end catch

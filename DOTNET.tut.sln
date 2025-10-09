@@ -4,6 +4,8 @@ VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{5B68813F-23C2-8DF2-1B1F-9033A2893F62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp10", "ConsoleApp10\ConsoleApp10.csproj", "{F12B5029-A1AC-0983-69B1-430048C1546C}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp2", "ConsoleApp2\ConsoleApp2.csproj", "{0BF52C80-90A9-AAB8-50BD-54373B8B4D6F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp3", "ConsoleApp3\ConsoleApp3.csproj", "{6329CA87-9671-25ED-4A09-4EEA9EF96758}"
@@ -30,6 +32,10 @@ Global
 		{5B68813F-23C2-8DF2-1B1F-9033A2893F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B68813F-23C2-8DF2-1B1F-9033A2893F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B68813F-23C2-8DF2-1B1F-9033A2893F62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F12B5029-A1AC-0983-69B1-430048C1546C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F12B5029-A1AC-0983-69B1-430048C1546C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F12B5029-A1AC-0983-69B1-430048C1546C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F12B5029-A1AC-0983-69B1-430048C1546C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0BF52C80-90A9-AAB8-50BD-54373B8B4D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0BF52C80-90A9-AAB8-50BD-54373B8B4D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0BF52C80-90A9-AAB8-50BD-54373B8B4D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,6 +73,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {0E66E268-57C3-4C19-9C18-8C6C2EE640DB}
+		SolutionGuid = {5F1C04E4-F21F-4F91-B4CF-CD34D4651D16}
 	EndGlobalSection
 EndGlobal

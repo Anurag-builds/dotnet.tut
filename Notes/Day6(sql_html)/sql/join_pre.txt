@@ -1,0 +1,205 @@
+1)select * from emp where dno=10
+
+2)select * from emp where dno=(select dno from dept where dnm='sales')
+
+3)select dnm from dept where dno=(select dno from emp where enm='ram')
+
+eno,enm,dno,dnm
+emp emp dept dept 
+
+dno-emp,dept
+
+join:join is used to retrieves the records from more than one tables.
+
+types of join
+1.inner /equi join
+2.outer join
+3.self join
+4.cross join
+
+1.inner join/equi join--returns common records from multiple tables
+
+equi join
+1)
+select eno,enm,dept.dno,dnm
+from emp,dept
+where emp.dno=dept.dno
+
+
+2)
+select eno,enm,dept.dno,dnm
+from emp,dept
+where emp.dno=dept.dno and dnm='sales'
+
+
+3)
+select eno,enm,dept.dno,dnm
+from emp,dept
+where emp.dno=dept.dno and eno=104
+
+inner join
+4)
+select eno,enm,dept.dno,dnm
+from emp inner join dept
+on emp.dno=dept.dno
+
+5)
+select eno,enm,dept.dno,dnm
+from emp inner join dept
+on emp.dno=dept.dno and dnm='sales'
+
+
+outer join
+1.left outer join
+2.right outer join
+3.full ouet join
+
+1.left outer join
+it returns all records from left table and matching records from right table.
+eg.
+select eno,enm,emp.dno,dnm
+from emp left outer join dept
+on emp.dno=dept.dno
+
+2.right outer join
+it returns all records from right table and matching records from left table.
+eg.
+select eno,enm,dept.dno,dnm
+from emp right outer join dept
+on emp.dno=dept.dno
+
+3.full outer join
+it returns all records from left and right tables.
+eg.
+select eno,enm,dept.dno,dnm
+from emp full outer join dept
+on emp.dno=dept.dno
+
+
+1)select * from emp where mgr=106
+
+2)select * from emp where mgr=(select eno from emp where enm='ganesh')
+
+3)select mgr from emp where enm='pooja'
+
+4)select enm from emp where eno=(select mgr from emp where enm='pooja')
+
+empname		mgrname
+pooja		ganesh
+
+self join
+one table is logically divided into multiple tables.
+
+1)
+select e.enm,m.enm as mgrname
+from emp e,emp m 
+where e.mgr=m.eno and e.enm='pooja'
+
+empname 	mgrname		mgr_mgrname
+pooja		ganesh		dhoni
+
+2)
+select e.enm,m.enm as mgrname,mm.enm as mgr_mgrname
+from emp e,emp m,emp mm
+where e.mgr=m.eno and m.mgr=mm.eno and e.enm='pooja'
+
+delete from emp---can rollback 
+truncate table emp---cannot be rollback.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

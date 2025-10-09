@@ -1,0 +1,195 @@
+emp
+eno	enm	dno	dnm
+101	pooja	10	sales
+102	ram	20	purchase
+103	suman	30	account
+104	ganesh	10	sales
+105	rakesh	20	purchase
+106	rohan	10	sales
+
+sales:5000
+purchase:2000
+account:500
+
+data redundancy
+
+normalization
+1.1st NF
+2.2nd NF
+3.3rd NF
+
+dept	emp(one to many)
+1	M
+1	1
+
+dept----------------------PK table/master table
+dno	dnm
+PK
+10 	sales
+20	purchase--not delete
+30	account
+40 	marketing
+
+emp	------------------FK table
+eno	enm	dno	
+PK		FK
+101	pooja	10
+102	ram	20
+103	Rahul	30	
+104	suman	10
+105	ganesh	20
+106 	neeta	10
+107	virat	80--not insert
+
+rno	sname	address	bno	bname	author	price	idate	rdate
+101	pooja	pune	10	.net	wrox	460	4/2/25	10/2/25
+102	Rahul	Mumbai	10 	.net	wrox	460	11/2/25	17/2/25
+101	pooja	pune	20	java	black	570	18/2/25	22/2/25
+102	Rahul 	Mumbai	20	java	black	570	23/2/25	28/2/25
+103	nitin	delhi	10 	.net	wrox	460	1/3/25	6/3/25
+
+1 student-50*20000=1000000
+2.book --1*1000--500=500000
+
+2nf form
+student		book(many to many)
+1		M
+M		1
+
+book
+bno	bname	author	price
+PK
+10	.net	wrox	460
+20	java	black	570
+
+student
+rno	sname	address
+PK
+101	pooja	pune
+102	Rahul	Mumbai--not delete
+103	nitin	delhi
+
+issue_return_details
+rno	bno	idate	rdate
+FK	FK
+101	10	2/2/25	7/2/25
+102	10	8/2/25	16/2/25
+101	20	17/2/25	22/2/25
+102	20	23/2/25	28/2/25
+103	10	1/3/25	9/3/25
+108	60--not insert
+
+1)
+create table dept
+(
+dno int primary key,
+dnm varchar(50)
+)
+
+2)FK to new table
+create table emp
+(
+eno int primary key,
+enm varchar(50),
+dno int constraint fk_dno foreign key  references dept(dno)
+)
+
+3)FK to existing column
+alter table emp add constraint fk_dno foreign key (dno) references dept(dno)
+
+4)FK to new column
+alter table emp add dno int constraint fk_dno foreign key references dept(dno)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

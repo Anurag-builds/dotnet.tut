@@ -1,0 +1,21 @@
+types of variable
+local--@---created by user
+global--@@----inbuilt variable
+
+local variable
+
+declare @a int,@b int,@c int
+set @a=10
+set @b=20
+set @c=@a+@b
+print 'Addition:'
+print @c
+
+global variable
+
+select @@SERVERNAME
+
+select @@LANGUAGE
+
+
+

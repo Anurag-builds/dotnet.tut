@@ -1,0 +1,18 @@
+data sources
+1.array
+2.collection/generics
+3.xml
+4.database(access,sql server,oracle,mysql)-sql
+
+developer always need to learn different data access syntax/code for different data source,higher learning curve
+time is waste on to learn syntax
+
+LINQ provides universal data access code for all data sources,reduce learning curve
+
+LINQ(Language Integrated Query)
+csharp oriented (object oriented)
+LINQ is object oriented version of query
+
+
+
+

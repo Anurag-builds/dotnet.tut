@@ -1,0 +1,165 @@
+ORM(Object Relational Mapping)
+
+object-csharp-developer
+relational-database
+
+object model
+data model/relational
+
+object model	relational/db/data model
+class		table
+property	column
+object		row
+inheritance	foreign key
+
+class Category   //principle entity
+{
+	public int CategoryId { get; set;}       //principle key
+	public string CategoryName { get; set;}
+
+	public List<Product> Products { get; set;}  //one to many---navigation property
+}
+
+class Product     //dependent entity
+{
+	public int ProductId { get; set;}sss
+	public string ProductName { get; set;}
+	public int Price { get; set;}
+
+	public int CategoryId { get; set;}   //foreign key
+
+	public Category category { get; set;} //one to one--navigation property
+
+}
+
+you should give foreign key in dependent entity, if you are not given foreign key then shadow foreign key is automatically generated
+shadow foreign key name:navigation property name+principle key name=CategoryCategoryId
+			CategoryCategoryId		
+			
+
+2 approach
+1.database first approach
+2.code first approach
+
+1.database first approach
+database/data model is convert to object model
+
+2.code first approach
+object model is convert to data model
+
+developer will use code first approach
+
+class/model/entity class/entity type
+
+DBContext class
+1)DBContext class is bridge between entity class and database table
+entity class<-->DBContext<-->database table
+
+2)DBContext is responsible for CRUD operation
+Create-insert
+Read-select
+Update
+Delete
+
+object---row
+10 objects--10 rows---data
+
+DBSet--collection of data/rows/object
+set of instances of entity type
+
+CRUD operation is performed on DBSet object using DBContext
+
+class ShoppingContext:DBContext
+{
+	public DBSet<Category> Categories {get ;set;}
+	public DBSet<Product> Products {get ;set;}
+
+	protected override void OnConfiguring(DBContextOptionsBuilder OptionsBuilder)
+	{
+		OptionsBuilder.UseSQLServer(@"Server=(local);Database=mydb;Trusted_Connection=True");
+	}
+}
+
+category
+cid	cname	
+101	electronics
+102	furniture
+103	kids
+
+product
+pid	pname	price	cid
+1	mixer	5600	1
+2	fridge	34000	1
+3	tv	56000	1
+4	sofa	67000	2
+4	bed	45000	2
+
+eagar loading
+101	electronics
+1	mixer	5600	1
+2	fridge	34000	1
+3	tv	56000	1
+
+explicit loading
+101	electronics
+
+when products are needed then only products will fetch
+
+using efcore(LINQ) we will not sql query,but sometime sql query is needed then it is called as raw sql
+
+
+migration will convert object model to data model
+migration class has 2 methods
+1)Up()-when called add migration
+2)Down()-when called remove migration
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

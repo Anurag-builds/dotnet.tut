@@ -1,0 +1,15 @@
+javascript are run at client side/browser---no need to go to the server--less server interaction-performance of application will be faster--reduce load on server
+
+mostly used for client side validation
+
+types of javascript
+1.external javascript-apply to multiple pages
+2.internal javascript-apply to single page
+3.inline javascript-apply to single element
+
+button-source
+click-event
+function-handle the click event(event listener)
+
+
+

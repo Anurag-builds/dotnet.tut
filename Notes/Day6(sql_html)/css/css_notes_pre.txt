@@ -1,0 +1,285 @@
+
+
+without css-design web page
+1.data and design are mixed
+
+<font color="red" size="18"><p><i><b><u>welcome to accenture</u></b></i></p></font>
+
+2.html has less features
+3.
+30 pages--website---design will be same for all 30 pages
+1 page-400 lines*30 times=12000
+
+code size increase,time,error,slower to download,performance of the application will be slower
+
+60 buttons-same design--30 lines*60=1800
+paragraph--40*20=800
+
+CSS
+1)external css/embedded css-code will be write only once
+
+stylesheet.css-external file
+page1  open in browser-->stylesheet.css download and page 1 download
+page 2--->only page 2 download
+page 3-->
+
+css file download only once-->application performance will increase
+code size reduce,time reduce,error chances reduce,faster to download
+
+ background-color:red;
+  color:blue;
+font:bold 18px arial;
+ font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:italic;
+ border:2px solid red;
+ border:2px dashed red;
+border-top:2px solid red;
+  border-top-color: red;
+  border-top-style:solid;
+ border-top-width:3px;
+ border-color: red;
+ border-style:solid;
+ border-width:3px;
+text-align:center
+ text-decoration:underline;
+text-transform:uppercase;
+ background-image:url('nature.jpeg');
+ height:300px;
+ width:800px;   
+ background-size:100% 100%;
+
+   background-image:url('flowers.jpg');
+    height:300px;
+  width:800px;   
+   background-repeat:no-repeat;
+   background-size:100% 100%;
+
+marign-space outside the border
+  margin:40px;
+  margin:10px 20px 30px 40px;
+ margin-top:40px;
+
+padding-space inside the border
+ padding:40px;
+
+ li
+        {
+            list-style-type:lower-roman;
+        }
+
+ 	p--selector
+        {--ruleset
+            background-color:red;
+            color:blue;
+        }
+
+types of selectors
+1.universal  *
+2.type
+3.id  #
+4.class  .
+5.grouping  ,
+6.combination  space
+
+1.universal selector
+apply to all elements,it is given by *
+eg. 
+	*
+        {
+           font-family:Arial;
+        }
+
+2.type selector
+apply to specific type
+eg.
+	p
+        {
+           font-family:Arial;
+        }
+
+3.id selector
+apply to single element,it is given # symbol
+eg.
+ 	#demo
+        {
+           background-color:yellow;
+           color:blue;
+        }
+
+<h1 id="demo">CSS</h1>
+
+4.class selector
+apply to different types of elements,it is given by . symbol
+eg.
+ 	.demo
+        {
+           background-color:yellow;
+           color:blue;
+        }
+<h1 class="demo">CSS</h1>
+<p class="demo">welcome to CSS</p>
+
+5)grouping
+apply to different types of elements,it is given by ,
+eg.
+	h1,h2,h3
+        {
+           background-color:yellow;
+           color:blue;
+        } 
+<h1>Accenture</h1>
+<p>welcome to accenture</p>
+<h2>CSS</h2>
+<p>welcome to CSS</p>
+<h3>DOTNET</h3>
+<p>welcome to dotnet</p>
+
+6)combination
+target to specific element,it is given by space
+ eg.
+      #sample h2
+        {
+           background-color:yellow;
+           color:blue;
+        }      
+
+ <div id="demo">
+        <h1>Accenture</h1>
+        <p>welcome to accenture</p>
+        <h2>CSS</h2>
+        <p>welcome to CSS</p>
+        <h3>DOTNET</h3>
+        <p>welcome to dotnet</p>
+    </div>
+    <div id="sample">
+        <h1>ABC</h1>
+        <p>welcome to accenture</p>
+        <h2>XYZ</h2>
+        <p>welcome to CSS</p>
+        <h3>PQR</h3>
+        <p>welcome to dotnet</p>
+    </div>
+
+types of stylesheet
+1.external stylesheet-apply to multiple pages
+2.internal/embedded stylesheet-apply to single page
+3.inline stylesheet-apply to single element
+
+first external then internal
+external-->internal
+
+external:
+ <link href="StyleSheet.css" rel="stylesheet" />
+
+internal:
+ <style>
+        h1 
+	{
+            background-color: yellow;
+        }
+    </style>
+
+inline:
+ <h1 style="background-color:green;color:purple">CSS</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

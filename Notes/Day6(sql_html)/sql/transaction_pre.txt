@@ -1,0 +1,33 @@
+priyansh
+
+bal-45000
+amount-5000
+
+1)amount is minus from  balance---(45000-5000)-40000----success
+2)he get money from atm---fail---cancel whole transaction(rollback/undo)
+
+
+10 steps
+
+1)amount is minus from  balance---(45000-5000)-40000----success
+2)he get money from atm---success----commit
+
+begin try
+begin tran
+insert into emp(eno,enm,dno)values(110,'anurag',10)--success
+insert into emp(eno,enm,dno)values(106,'sahil',20)--fail--exception
+if(@@TRANCOUNT>0)
+commit transaction
+end try
+begin catch
+print 'error occured'
+print error_message()
+if(@@TRANCOUNT>0)
+rollback transaction
+end catch
+
+
+
+
+
+

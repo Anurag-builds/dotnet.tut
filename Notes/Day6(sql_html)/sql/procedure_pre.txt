@@ -1,0 +1,139 @@
+store procedure:collection of sql statement
+it is called as pre-complied object
+
+compile once
+run 1st--run
+2nd --run
+3rd--run
+
+benifits:
+1.compile once run many times--->performance will increase
+2.abstraction
+
+
+1.
+create procedure first
+as
+begin
+select * from emp
+end
+
+call:
+exec first
+
+2.
+create procedure second(@d int)
+as
+begin
+select * from emp where dno=@d
+end
+
+call:
+exec second 10
+
+3.
+create procedure third(@en int,@nm varchar(50),@d int)
+as
+begin
+insert into emp(eno,enm,dno)values(@en,@nm,@d)
+end
+
+call:
+exec third 109,'seema',20
+
+4.
+input-dno-10
+output-empcount-3
+
+create procedure four(@d int,@c int output)
+as
+begin
+select @c=count(*) from emp where dno=@d
+end
+
+call:
+declare @cn int
+exec four 10,@cn output
+select @cn
+
+5.
+input--eno-104
+output-enm-ram
+output-dno-10
+
+create procedure five(@en int,@nm varchar(50) output,@d int output)
+as
+begin
+select @nm=enm,@d=dno from emp where eno=@en
+end
+
+call:
+declare @nm varchar(50),@dn int
+exec five 104,@nm output,@dn output
+select @nm,@dn
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
