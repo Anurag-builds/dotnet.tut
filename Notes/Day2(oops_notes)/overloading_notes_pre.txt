@@ -1,0 +1,6 @@
+in one class multiple methods has same name with different parameters
+parameters are differ by the following way
+1.number of parameters
+2.type of parameters
+3.sequenece of parameters
+

@@ -1,0 +1,46 @@
+1.delegate is a function pointer which accept method as parameter
+2.delegate and method signature must be same(return type and parameters)
+
+types of delegate
+1.unicast delegate
+2.multicast delegate
+
+1.unicast delegate
+one delegate object hold the reference of one method only.
+
+2.multicast delegate
+a)one delegate object hold the reference of multiple methods.
+b)return type should be void in the multicast delegate,otherwise unpredictable result u will received.(data will lost) 
+
+
++=   it is multicast operator which is used add method
+-=   it is multicast operator which is used remove method
+
+benefits of delegate:
+1.abstraction
+2.protection
+3.on single event multiple methods are called using delegate
+
+
+Event(Typing)------methods(print(),pagecount(),wordcount(),spellcheck())
+
+event-->delegate-->method
+thread-->delegate-->method
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

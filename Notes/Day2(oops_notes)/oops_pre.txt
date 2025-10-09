@@ -1,0 +1,168 @@
+OOPS(Object Oriented Programmings)
+
+1.Encapsulation
+2.Inheritance
+3.Polymorphism
+4.Abstraction
+
+class
+it is blueprint for the object.
+it is collection of data members and functions members.
+
+eg.
+customer
+cid,cname,adhar,phno,address,bal
+withdraw(),deposit(),view_balance()
+
+book
+bid,bname,author,price
+issue(),return(),view_details(),edit_book()
+
+object
+it is instance of an class.
+Accenture obj=new Accenture();
+
+encapsulation
+protection by data hiding
+it is binding of data and methods together in singe unit,which provide protective wrapper over class.
+
+encapsulation is achieved by using access specifiers and properties
+
+Access Specifiers
+1.private-accessible only within the class
+2.protected-accessible only within the class and to derived class
+3.public-accessible outside the class and outside the namespace
+4.internal-accessible outside the class but inside the namespace only
+
+default access specifier of the class member is private
+
+inheritance
+why?-code reusability
+one class acquires the properties of the other class.
+generalized to specialized
+
+employee-->Trainer-->.NET_Trainer
+
+base/super/parent
+derived/sub/child
+
+types of inheritance
+1.simple
+A-->B
+emp-->trainer
+
+2.multilevel
+A-->B-->C
+emp-->trainer-->dotnet_trainer
+
+3.multiple
+A,B-->C
+multiple inheritance is not supported in csharp
+only one class you can inherit
+
+4.Hireechical
+A-->B,C,D
+vechicle-->car,truck,bus,auto
+
+Abstraction
+hiding unessential and showing essential
+hiding internal details
+eg.whatsapp msg
+
+polymorpshism
+poly-many
+morphism-forms
+one method can take many forms
+eg.amazon payment
+
+types of polymorphism
+1.compile time polymorphism/static/early binding
+eg.method overloading
+
+2.runtime polymorphism/dynamic/late binding
+eg.method overriding
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

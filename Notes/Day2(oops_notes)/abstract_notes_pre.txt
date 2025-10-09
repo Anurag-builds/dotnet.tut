@@ -1,0 +1,48 @@
+1)method which doesnot have body declare that method as abstract.
+2)class which contains abstract methods declare that class as abstract
+3)when we inherit abstract class, we must override all abstract methods from the abstract class into derived class.
+4)cannot create instance/object of abstract class
+
+
+abstract method-must be override
+virtual method-should be override
+
+class car{}
+
+class thar:car{}
+
+class-->class(inherits)
+interface-->class(implements)
+
+1.interface methods are by default abstract(method does not have body)
+2)when we implement interface then all abstract methods from the interface must be override into derived class.
+3)cannot create object of interface
+
+difference between abstract class and interface
+multiple inheritance is not supported in csharp
+you can inherit only one class
+
+abstract class-can inherit only one class
+interface-can implements multiple interfaces.
+
+class-->class          --inheritance
+interface-->class      --implements
+interface-->interface  --inheritance
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

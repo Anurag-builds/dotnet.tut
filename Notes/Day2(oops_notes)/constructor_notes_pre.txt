@@ -1,0 +1,16 @@
+object should initialize immediately after the creation of object.
+constructor is called immediately after the creation of object,so we can initlize the object in the constructor
+
+syntax:
+1.constructor name is similar as class name
+2.constructor does not have any return type not even void
+
+
+types of constructor
+1.default constructor-if user not given any constructor then compiler provide default constructor.
+it does not have any parameter.
+
+2.parameterized constructor
+
+
+

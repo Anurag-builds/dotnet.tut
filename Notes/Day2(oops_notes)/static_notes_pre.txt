@@ -1,0 +1,66 @@
+static 
+1.static method-called without object
+2.static variable-create single copy of memory which is shared by all objects the class
+3.static constructor-called only once either we create first object or called static method
+4.static class-contains only static members, cannot add instance members
+5.static property -called without object
+
+when we create object--memory created(occupied)-memory efficiency reduced
+
+static method
+static method is called without object
+static method can access only static members.
+
+class Employee
+{
+	int empno;
+	string empname;
+	static string companyname;
+}
+
+60 memories empno
+60 memories empname
+1 memory companyname="accenture"
+
+static variable
+it is create only one copy of memory which is shared by all objects of the class, so memory efficiency will increase.
+
+static constructor
+it is called only once either we create first object or call static method.
+use of static constructor:
+1.code which you want to execute only once then you can write that code in static constructor.
+2.static variable should be initlized into static constructor
+
+static variable--create only one memory which is shared by all objects
+class Employee
+{
+	int empno;
+	string empname;
+	static string companyname; //1 memory
+
+	static Employee()
+	{
+		companyname="accenture";
+	}
+}
+60 objects-static constructor called only 1 time
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
