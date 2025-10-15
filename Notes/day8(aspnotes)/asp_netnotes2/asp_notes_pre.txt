@@ -1,0 +1,182 @@
+hosting Model
+1.In-Process Model
+2.Out of Process Model
+
+In-Process Model-
+1)hosted inside IIS--worker process(w3wp.exe)
+2)By default In-Process Model is enabled.
+
+Out-Of-Process Model
+it has 2 servers
+-internal server-Kestral server
+-external server-IIS server
+
+worker process for out-of-process model  is dotnet.exe
+
+razor page has extension cshtml
+
+bydefault Index.cshtml page will run/home page
+
+Index.cshtml-design/view/UI--html/css
+Index.cshtml.cs-logic/model(data/logic)--csharp
+
+Index.cshtml-view
+Index.cshtml.cs-model
+
+
+razor page--Index.cshtml-(view) we can write csharp code inside view
+
+@{}---used to write csharp code into view file  
+
+asp-tag-helper
+1)asp-for
+2)asp-page
+
+asp-for tag helper
+eg.
+<input type="text" asp-for="sname" />
+
+html tag helper
+1)DisplayFor
+
+DisplayFor
+eg.
+@Html.DisplayFor(Model=>Model.sname)
+
+Layout Page
+layout page contains look and fill of the website
+
+location of layout page--Pages-->Shared-->_Layout.cshtml
+
+30 pages --layout will apply to all 30 pages
+globally--
+
+_ViewStart.cshtml    (global decalartion)
+it set the layout page for whole website(all pages)/globally
+eg.
+@{
+    Layout = "_Layout";
+}
+
+we can apply layout page to single page also/page specific layout
+how to apply layout to single page(page level layout)
+
+Section
+layout page can have one or more section
+
+section is created in layout page by calling RenderSection
+eg.
+_Layout page
+
+@RenderSection("mysection",required:true)
+
+required:true
+you must define the section in content page 
+required:false
+it is optional to define the section in content page.
+
+content(Index.cshtml/first.cstml....)
+@section mysection{
+    <h1>this is mysection define by index page</h1>
+}
+
+Tag Helper
+asp tag helper and html tag helper
+
+asp-tag-helper
+1)asp-for :used to bind the model property to view
+2)asp-page :used to navigate to other page
+3)asp-action: navigate to action
+4)asp-controller: navigate to the controller
+5)asp-validation-for
+
+
+html tag helper
+1)DisplayFor:used to bind the model property to view
+
+2)@Html.ActionLink("linktext","actionname","controllername")
+
+type of request
+1.get-
+a.retrives the date
+b.data send in browser url,so it is visible url,so not safe
+c.less amount of data we can pass
+
+2.post
+a.submit the data(insert)
+b.data is pass in body,so data is not visible in url,so it safe
+c.large amount of data can be pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

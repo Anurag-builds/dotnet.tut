@@ -1,0 +1,31 @@
+interface IAddress
+{
+}
+class Address2:IAddress
+{
+	public string City{get;set;}
+	public string State{get;set;}
+	public string Country{get;set;}
+}
+class Employee
+{	
+	public Address2 adr{get;set;}	
+
+	public Employee()
+	{
+		adr=new Address2(); //tightly coupled--without dependency injection
+	}
+}
+
+class Employee
+{	
+	public IAddress adr;	
+
+	public Employee(Iaddress adr)  //dependency will send by IOC container
+	{
+		this.adr=adr; //loosly coupled--with constructor dependency injection
+	}
+}
+
+ioc container will create object of address class automatically and send to constructor
+ioc container create object only once

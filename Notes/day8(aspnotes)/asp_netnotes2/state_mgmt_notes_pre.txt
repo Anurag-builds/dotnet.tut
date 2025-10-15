@@ -1,0 +1,125 @@
+types of state management 
+1.client side
+2.server side
+
+1.client side-data stored at client computer/browser
+a)Hidden Field
+B)Cookies
+c)QueryString
+d)ViewState
+benefits of client state mgmt.:
+1)saves memory of server
+2)less server interaction
+3)performance will increase
+disadvantage:
+1)not secure because stored at client computer
+
+
+2.server-side-data stored at server computer
+a)session
+b)application
+c)ViewBag
+d)ViewData
+e)TempData
+benefits of server state management
+1)secure,because data stored at server computer
+disadvantage
+1)take the memory server,increase load on server
+
+1)Hidden Form Field
+it is not visible to the user
+benefits:
+send the data from view to model in hidden form.(same page)
+disadvantage:
+not secure, because it stored at client browser.
+
+2)QueryString
+a)it is key/value pair which is appended to url and it is used pass the data from one page to other page.
+b)querystring and url are separate by ?
+c)key and value are separate by =
+d)2 keys are seprate by &
+disadvantage:
+1.it is visible in browser url,so not secure
+2.limited data u can pass
+
+3)ViewData
+a)it is used to pass the data from model to view.
+b)unboxing is required
+
+4)ViewBag
+a)it is used to pass the data from model to view.
+b)unboxing is not required
+c)it is dynamic in type
+
+ViewData and ViewBag are accessible within same page/request,cannot use the data to another page.
+
+TempData
+TempData are accessible to the another page/new request.
+
+Session
+login--session created
+logout -session destroyed
+session is user specific
+session is server side state mgmt,data will be stored at server computer,so it secure.
+session is bydefault disabled,you have to enabled in Program.cs file as below
+
+  builder.Services.AddDistributedMemoryCache();
+  builder.Services.AddSession();
+  app.UseSession();
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

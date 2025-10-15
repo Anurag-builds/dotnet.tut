@@ -1,0 +1,80 @@
+Model-Data/logic
+View-UI
+Controller-manage view and model
+
+user-->login page--req-->controller-->login view-->user-->fill the login form by user-->click on login button-->request send to the controller-->(logic/model)-->view(inbox)-->user
+
+Model-Data/logic-developer
+View-UI-designer
+Controller-manage view and model
+
+Controller is a class
+Controller has public methods are called action
+
+method/action-handle user request
+return type of action method is IActionResult interface
+action method can return view,json data,file
+
+default controller-Home
+default action-Index
+http://localhost:5018/
+
+http://localhost:5018/Home/Index
+http://localhost:5018/home/first
+
+layout view:common look and feal(header and footer)
+
+partial view:it is reusable view
+
+html tag helper:
+1)ActionLink
+2)DisplayFor
+3)DisplayNameFor
+4)TextBoxFor
+
+asp tag helper
+1)asp-action
+2)asp-controller
+3)asp-page
+4)asp-for
+5)asp-validation-for
+6)asp-route-
+
+interface ITagHelper
+{
+	Process();
+}
+
+abstract TagHelper class:ITagHelper
+{
+}
+
+class MyTag:TagHelper
+{
+	override Process(){}
+}
+
+State Management
+1)Viewdata
+a)transfer data from controller to view
+b)Unboxing is required
+
+2)ViewBag
+a)transfer data from controller to view
+b)Unboxing is not required, because its dynamic in type
+
+ViewData and ViewBag is available in current request/current action 
+
+TempData
+its available to new request/action also
+
+
+
+
+
+
+
+
+
+
+
